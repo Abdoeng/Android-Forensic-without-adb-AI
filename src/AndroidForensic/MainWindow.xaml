@@ -1,0 +1,53 @@
+<Window x:Class="AndroidForensic.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Android Forensic Analysis - No ADB Required" Height="900" Width="1400"
+        WindowStartupLocation="CenterScreen"
+        Background="#F0F0F0">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="280" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Background="#1a1a1a" VerticalAlignment="Stretch">
+            <TextBlock Text="Android Forensics" Foreground="White" FontSize="14" FontWeight="Bold" Padding="15" TextAlignment="Center" BorderThickness="0,0,0,2" BorderBrush="#ff6b35" />
+            <Button Content="🔌 Connect" Style="{StaticResource NavButton}" />
+            <Button Content="📁 File Browser" Style="{StaticResource NavButton}" />
+            <Button Content="💾 Data Extraction" Style="{StaticResource NavButton}" />
+            <Button Content="🔍 Analysis" Style="{StaticResource NavButton}" />
+            <Separator Background="#444" Margin="10,10" />
+            <Button Content="🤖 AI Engine" Style="{StaticResource NavButton}" />
+            <Button Content="🚨 Threat Detection" Style="{StaticResource NavButton}" />
+            <Button Content="📊 Reports" Style="{StaticResource NavButton}" />
+            <Button Content="⚙️ Settings" Style="{StaticResource NavButton}" VerticalAlignment="Bottom" />
+        </StackPanel>
+        <Grid Grid.Column="1">
+            <StackPanel Margin="20" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="Android Forensic Analysis" FontSize="36" FontWeight="Bold" Foreground="#333" TextAlignment="Center" />
+                <TextBlock Text="AI-Powered Investigation Without ADB" FontSize="16" Foreground="#666" TextAlignment="Center" Margin="0,10,0,40" />
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
+                    <Button Content="🔗 Connect Device" Padding="15,10" FontSize="12" Margin="10" Background="#ff6b35" Foreground="White" />
+                    <Button Content="🚀 Start Analysis" Padding="15,10" FontSize="12" Margin="10" Background="#00b4d8" Foreground="White" />
+                </StackPanel>
+                <TextBlock Text="Status: Ready" FontSize="12" Foreground="#888" TextAlignment="Center" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+    <Window.Resources>
+        <Style x:Key="NavButton" TargetType="Button">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Padding" Value="15,10" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="HorizontalContentAlignment" Value="Left" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Margin" Value="0,5" />
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#ff6b35" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+</Window>
